@@ -1,0 +1,11 @@
+to create a volume in our local system run the following command:
+first create the image
+then create volume 
+docker volume create --name django-app-volume --opt type=none --opt device=/home/ubuntu/docker/volumes/django-app-volume --opt o=bind
+/home/ubuntu/docker/volumes/django-app-volume : this is the path where we created our volume in our local system 
+
+
+to mount this volume to our container 
+docker run -d --mount source=django-app-volume,target=/data -p 8000:8000 django-app:latest
+
+here django-app is our image name
