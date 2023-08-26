@@ -9,3 +9,11 @@ to mount this volume to our container
 docker run -d --mount source=django-app-volume,target=/data -p 8000:8000 django-app:latest
 
 here django-app is our image name
+
+
+TWO TYPES OF VOLUME IN DOCKER
+
+bind Volume : create volume in your host sys and bind to your container volume 
+
+DOCKER VOLUME : THis is manage by docker ..here we have to create volume by docker volume create 
+and then mount the host volume a=with container volume
